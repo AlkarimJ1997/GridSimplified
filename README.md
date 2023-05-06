@@ -102,7 +102,7 @@ By setting `display: grid` on the parent element, we can turn it into a grid con
 
 Unlike Flexbox, setting `display: grid` doesn't actually do anything. To define our grid layout, it's typical to use the `grid-template-columns` and `grid-template-rows` properties.
 
-The dividing lines that make up the structure of the grid are called \***\*grid lines\*\***, and can be either vertical (column grid lines) or horizontal (row grid lines).
+The dividing lines that make up the structure of the grid are called **_grid lines_**, and can be either vertical (column grid lines) or horizontal (row grid lines).
 
 **Note: All images are credited to [CSS-Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/)**
 
