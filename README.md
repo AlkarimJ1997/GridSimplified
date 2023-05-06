@@ -110,13 +110,13 @@ See the image below:
 
 ![Grid Lines](https://css-tricks.com/wp-content/uploads/2018/11/terms-grid-line.svg)
 
-A single "unit" of the grid is called a \***\*grid cell\*\***.
+A single "unit" of the grid is called a **_grid cell_**.
 
 The following image depicts a grid cell between row grid lines 1 and 2, and column grid lines 2 and 3:
 
 ![Grid Cell](https://css-tricks.com/wp-content/uploads/2018/11/terms-grid-cell.svg)
 
-Finally, the columns or rows of the grid are called \***\*grid tracks\*\***.
+Finally, the columns or rows of the grid are called **_grid tracks_**.
 
 Here's an image of the grid track between the second and third row grid lines:
 
@@ -211,7 +211,7 @@ Alternatively, we could make one column larger like so:
 
 Now, the first column will be twice as wide as the other two.
 
-With the grid-only unit `fr`, we can set the size as a fraction of the \***\*free space\*\*** in the grid container. For example, if we have three columns, each with a width of `1fr`, they will each take up one-third of the available space.
+With the grid-only unit `fr`, we can set the size as a fraction of the **_free space_** in the grid container. For example, if we have three columns, each with a width of `1fr`, they will each take up one-third of the available space.
 
 ```css
 .parent {
@@ -267,9 +267,9 @@ We can define `grid-template-areas` like so:
 }
 ```
 
-\***\*Each string represents a row in the grid.\*\***
+**_Each string represents a row in the grid._**
 
-\***\*Each space in the string represents a column.\*\***
+**_Each space in the string represents a column._**
 
 Notice that we can use the `.` character to signify an empty cell.
 
@@ -864,7 +864,7 @@ This will create as many columns of `100px` as possible on a row.
 
 The `auto-fit` keyword tells the browser to fit whatever columns there are into the space and to prefer expanding columns to fill space rather than have any empty columns.
 
-\***\*This is revolutionary for creating responsive grids.\*\***
+**_This is revolutionary for creating responsive grids._**
 
 As explained with the `grid-auto-flow` property, we can set the following CSS to create dynamic columns depending on the number of children:
 
@@ -978,7 +978,7 @@ In this case, Child 4 will actually be placed in the first column of a new row, 
 
 Due to this behavior, except for edge cases and complex layouts, it's better to not declare grid rows, as doing so incorrectly can lead to unexpected behavior.
 
-One more thing to keep in mind is \***\*implicit grid rows will match the height of the tallest item in the row\*\***. This is usually what we want but it can be adjusted with the `grid-auto-rows` property.
+One more thing to keep in mind is **_implicit grid rows will match the height of the tallest item in the row_**. This is usually what we want but it can be adjusted with the `grid-auto-rows` property.
 
 ## Don't Use Percentages
 
@@ -1267,7 +1267,7 @@ But we don't want to define the number of times to repeat, so we can use `auto-f
 `auto-fit` will fit the columns you've defined into the available space.
 `auto-fill` will fill the available space with as many columns as possible, even if they are empty.
 
-\***\*Almost always, you'll want to use `auto-fit`.\*\***
+**_Almost always, you'll want to use `auto-fit`._**
 
 From there, we define the minimum and maximum size of each column using the `minmax()` function.
 
