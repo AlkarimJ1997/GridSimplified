@@ -1,0 +1,105 @@
+:root {
+	--clr-primary: #ee6352;
+	--clr-secondary: #d16e8d;
+	--clr-accent: #f7f7ff;
+	--clr-gradient: linear-gradient(
+		-90deg,
+		var(--clr-primary),
+		var(--clr-secondary)
+	);
+
+	--ff-title: 'Bungee', cursive;
+	--ff-body: 'Poppins', sans-serif;
+
+	--fw-body: 300;
+	--fw-bold: 800;
+	--fw-title: 400;
+	--fw-number: 800;
+}
+
+/* CSS RESET */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+textarea,
+select,
+button {
+	font: inherit;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+body {
+	min-height: 100vh;
+	font-family: var(--ff-body);
+	font-size: 1.25rem;
+	font-weight: var(--fw-body);
+}
+
+.columns {
+	display: grid;
+    grid-template-columns: 50% 25% 25%;
+	width: min(90%, 75rem);
+	margin: 5rem auto;
+}
+
+.title {
+	position: relative;
+	background: var(--clr-gradient);
+	margin: 0;
+	padding: 1em 0 2em;
+	text-align: center;
+	text-transform: uppercase;
+	z-index: 1000;
+}
+
+.title {
+	clip-path: polygon(0 0, 100% 0%, 100% 60%, 0% 100%);
+	font-family: var(--ff-title);
+	font-size: calc(1rem + 3vw);
+	font-weight: var(--fw-title);
+	color: white;
+	text-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.title span {
+	position: absolute;
+	display: inline-block;
+	top: -30%;
+	right: 0;
+	left: 0;
+	font-size: 5em;
+	font-weight: var(--fw-number);
+	color: black;
+	opacity: 0.25;
+	z-index: -1;
+}
+
+/* Media Queries */
+@media (min-width: 55em) {
+	.columns {
+		/* grid-auto-flow: column; */
+
+		/* didn't mention this during the video
+         but it ensures equal columns  */
+		/*     grid-auto-columns: 1fr; */
+	}
+}

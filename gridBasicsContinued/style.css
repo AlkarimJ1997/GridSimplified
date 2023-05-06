@@ -1,0 +1,295 @@
+:root {
+	--fs-900: 3rem;
+	--fs-800: 2.5rem;
+	--fs-700: 2rem;
+	--fs-400: 1rem;
+
+	--fw-400: 400;
+	--fw-700: 700;
+
+	--size-400: 1.5rem;
+	--size-500: 3rem;
+	--size-600: 6rem;
+
+	--clr-neutral-900: hsl(0, 9%, 11%);
+	--clr-neutral-200: hsl(36, 24%, 96%);
+	--clr-neutral-100: hsl(0, 0%, 100%);
+
+	--clr-primary-200: hsl(213, 43%, 79%);
+	--clr-primary-300: hsl(190, 84%, 50%);
+	--clr-primary-400: hsl(217, 100%, 50%);
+	--clr-primary-500: hsl(190, 100%, 28%);
+}
+
+/* CSS RESET */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+select,
+textarea,
+button {
+	font: inherit;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+body {
+	min-height: 100vh;
+	background-color: var(--clr-neutral-200);
+	font-family: system-ui, sans-serif;
+	font-size: var(--fs-400);
+	color: var(--clr-neutral-900);
+	line-height: 1.4;
+	text-rendering: optimizeSpeed;
+}
+
+/* Remove animations, transitions and smooth scroll for people that do not prefer them */
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		scroll-behavior: auto !important;
+		transition-duration: 0.01ms !important;
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+	}
+}
+
+/* Font Size */
+.fs-900 {
+	font-size: var(--fs-900);
+}
+
+.fs-800 {
+	font-size: var(--fs-800);
+}
+
+.fs-700 {
+	font-size: var(--fs-700);
+}
+
+.fs-400 {
+	font-size: var(--fs-400);
+}
+
+/* Font Weight */
+.fw-regular {
+	font-weight: var(--fw-400);
+}
+.fw-bold {
+	font-weight: var(--fw-700);
+}
+
+/* Background Colors */
+.surface-neutral-100 {
+	background-color: var(--clr-neutral-100);
+}
+
+.surface-neutral-200 {
+	background-color: var(--clr-neutral-200);
+}
+
+.surface-neutral-900 {
+	background-color: var(--clr-neutral-900);
+}
+
+.surface-primary-200 {
+	background-color: var(--clr-primary-200);
+}
+
+.surface-primary-300 {
+	background-color: var(--clr-primary-300);
+}
+
+.surface-primary-400 {
+	background-color: var(--clr-primary-400);
+}
+
+.surface-primary-500 {
+	background-color: var(--clr-primary-500);
+}
+
+/* Text Colors */
+.text-neutral-100 {
+	color: var(--clr-neutral-100);
+}
+
+.text-neutral-200 {
+	color: var(--clr-neutral-200);
+}
+
+.text-neutral-900 {
+	color: var(--clr-neutral-900);
+}
+
+.text-primary-300 {
+	color: var(--clr-primary-300);
+}
+
+.text-primary-400 {
+	color: var(--clr-primary-400);
+}
+
+.text-primary-500 {
+	color: var(--clr-primary-500);
+}
+
+/* Alignment */
+.text-center {
+	text-align: center;
+}
+
+.margin-auto {
+	margin: auto;
+}
+
+.margin-block-auto {
+	margin-block: auto;
+}
+
+.margin-inline-auto {
+	margin-inline: auto;
+}
+
+.margin-top-auto {
+	margin-top: auto;
+}
+
+.margin-bottom-auto {
+	margin-bottom: auto;
+}
+
+.margin-right-auto {
+	margin-right: auto;
+}
+
+.margin-left-auto {
+	margin-left: auto;
+}
+
+/* Margin stuff */
+.margin-top-400 {
+	margin-top: var(--size-400);
+}
+
+.margin-top-500 {
+	margin-top: var(--size-500);
+}
+
+.margin-top-600 {
+	margin-top: var(--size-600);
+}
+
+.margin-bottom-400 {
+	margin-bottom: var(--size-400);
+}
+
+.margin-bottom-500 {
+	margin-bottom: var(--size-500);
+}
+
+.margin-bottom-600 {
+	margin-bottom: var(--size-600);
+}
+
+.margin-block-400 {
+	margin-block: var(--size-400);
+}
+
+.margin-block-500 {
+	margin-block: var(--size-500);
+}
+
+.margin-block-600 {
+	margin-block: var(--size-600);
+}
+
+/* Padding stuff */
+.padding-block-auto {
+	padding-block: auto;
+}
+
+.padding-inline-auto {
+	padding-inline: auto;
+}
+
+.padding-top-auto {
+	padding-top: auto;
+}
+
+.padding-bottom-auto {
+	padding-bottom: auto;
+}
+
+.padding-right-auto {
+	padding-right: auto;
+}
+
+.padding-left-auto {
+	padding-left: auto;
+}
+
+.padding-400 {
+	padding: var(--size-400);
+}
+
+.padding-500 {
+	padding: calc(var(--size-400) * 2);
+}
+
+/* Borders */
+.border-right-thin {
+	border-right: 1px solid rgb(197, 192, 182);
+}
+
+/* Spacing */
+:where(.flow > :not(:first-child)) {
+	margin-top: var(--flow-space, var(--size-400));
+}
+
+.container {
+	--max-width: 75rem;
+
+	width: min(100% - 2rem, var(--max-width));
+	margin-inline: auto;
+}
+
+.grid-even-columns {
+	display: grid;
+	gap: 1rem;
+}
+
+/* Media Queries */
+@media (width >= 40em) {
+	.grid-even-columns {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (width >= 60em) {
+	.grid-even-columns {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
